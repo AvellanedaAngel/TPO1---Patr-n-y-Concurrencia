@@ -26,7 +26,7 @@ public class MainSistemaPedidos {
         pool.invoke(proceso2);
 
         System.out.println("[TERCER FLUJO]: Pasar de Enviado a Entregado");
-        ProcesadorPedidos proceso3 = new ProcesadorPedidos(pedidos,0, pedidos.size()-1;
+        ProcesadorPedidos proceso3 = new ProcesadorPedidos(pedidos,0, pedidos.size()-1);
         pool.invoke(proceso3);
 
         //System.out.println("[CUARTO FLUJO]: Cancelar pedidos");
