@@ -11,6 +11,10 @@ public class Pedido {
     public void setEstado(EstadoPedido estado) {
         this.estadoActual = estado;
     }
+    public void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
+    }
+
     public void procesar() {
         estadoActual.procesar(this);
     }
