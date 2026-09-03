@@ -4,5 +4,6 @@ public class EstadoEntregado implements EstadoPedido {
     }
     public void cancelar(Pedido pedido) {
         pedido.mostrarMensaje("Pedido: " + pedido.getId() + " no puede ser cancelado, ya fue entregado");
-    } 
+    }
+   
 }
