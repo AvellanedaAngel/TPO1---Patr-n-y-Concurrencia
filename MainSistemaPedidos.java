@@ -18,15 +18,15 @@ public class MainSistemaPedidos {
         ForkJoinPool pool = new ForkJoinPool();
 
         System.out.println("[PRIMER FLUJO]: Pasar de Nuevo a Pagado");
-        ProcesadorPedidos proceso1 = new ProcesadorPedidos(pedidos, 0, pedidos.size());
+        ProcesadorPedidos proceso1 = new ProcesadorPedidos(pedidos, 0, pedidos.size()-1);
         pool.invoke(proceso1);
 
         System.out.println("[SEGUNDO FLUJO]: Pasar de Pagado a Enviado");
-        ProcesadorPedidos proceso2 = new ProcesadorPedidos(pedidos, 0, pedidos.size());
+        ProcesadorPedidos proceso2 = new ProcesadorPedidos(pedidos, 0, pedidos.size()-1);
         pool.invoke(proceso2);
 
         System.out.println("[TERCER FLUJO]: Pasar de Enviado a Entregado");
-        ProcesadorPedidos proceso3 = new ProcesadorPedidos(pedidos, 0, pedidos.size());
+        ProcesadorPedidos proceso3 = new ProcesadorPedidos(pedidos,0, pedidos.size()-1;
         pool.invoke(proceso3);
 
         //System.out.println("[CUARTO FLUJO]: Cancelar pedidos");
